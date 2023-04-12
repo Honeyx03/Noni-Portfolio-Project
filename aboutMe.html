@@ -1,0 +1,246 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noni's Portfolio</title>
+    <script src="https://kit.fontawesome.com/f660f92ca9.js" crossorigin="anonymous"></script>
+    <!-- <script src="script.js" defer></script> -->
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=DynaPuff&family=Open+Sans&family=Roboto:wght@300&family=Shantell+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Portfolio Images/professionalPhoto.jpg" class="logo" alt="professional photo">
+            <ul id="side-menu">
+                <li><a href="main.html"">Go Back to Home Page</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Articles</a></li>
+                <li><a href="#portfolio">Browse</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+                <i class="fa-solid fa-square-xmark" style="color: #fc6e09;" onclick="closeMenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" style="color: #ffffff;" onclick="openMenu()"></i>  
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Developer</p>
+            </div>
+        </div>
+    </div>
+<div class="intro">
+    <h3>Welcome! My name is <span>Noni</span>. I am a beginner software developer located in the Bronx, NY. This page was created to demonstrate my skills as a front-end developer. The theme of this project is <span>climate change</span>. Hope you enjoyed your time exploring the content!</h3>
+</div>
+    <!-- this is the About Me section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-column-1">
+                    <img class="about-me-img" src="Portfolio Images/flowerGirl.jpg" alt="A photo of Noni">
+                </div>
+                <div class="about-column-2">
+                    <h1 class="subtitle">About Me</h1>
+                        <p class="about-me-text">Hello again, my name is Noni Porter. I am extremely passionate about social and environmental causes. I believe it is important to protect our planet by actively taking initiatives aimed at combating climate change. I am a strong advocate for creating a green nation and I am always looking for ways to promote sustainability in my community.
+                        </p>
+
+                        <p class="about-me-text">In addition to my passion for environmental protection, I understand the value of staying up-to-date with the latest research and technology in this field and I am always looking to expand my knowledge. </p>
+                        
+                        <p class="about-me-text">Hence, technology is another area that fascinates me! I look forward to  exploring how advancements in technology can be used to improve people's lives and solve complex problems.</p>
+                        
+                        <p class="about-me-text">I considerate myself a well-rounded individual who is committed to making a positive impact on the world. I hope you find my interests and passions on this page as a reflection of my desire to create a better future for generations to come via progressive technology, ethics, and equitable educational opportunities.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                            <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                            <p class="tab-links" onclick="openTab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                                <li><span>Web Development</span><br>Web Development</li>
+                                <li><span>App Development</span><br>Building Andriod &Browser Applications</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Weather Application</span><br>Created a functional weather app using a weather API to display weather information for specific locations around the world - gives weather information up to two days </li>
+                                <li><span>Dinosaur Project</span><br>Built an digital receipt system that takes customer information and returns a receipt with ticket information, customers' names, pricing using existing object-oriented databases</li>
+                                <li><span>GtiHub</span><br>Collaborated on many amateur GitHub projects with fellow colleagues</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Dec 2022-Current</span><br>UI/UX Designing Fellow at Pursuit</li>
+                                <li><span>Jan 2022- Mar 2022</span><br>Self-Taught Python Database Learning</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- this is the Services Section -->
+<div id="services">
+    <div class="container">
+        <h1 class="subtitle">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-seedling" style="color: #466c19;"></i>
+                <h2>Web Design</h2>
+                <p class="contact">Let me help you plan, create, and code your websites</p>
+                <a href="#contact">Learn More </a>
+            </div>
+            <div>
+                <i class="fa-solid fa-person-chalkboard" style="color: #60127d;"></i>
+                <h2>UI/UX</h2>
+                <p class="contact">Need an engaging interactive website? I am your girl! Just fill out the contact form below.</p>
+                <a href="#contact">Learn More </a>
+            </div>
+            <div>
+                <i class="fa fa-light fa-laptop-code" style="color: #de3baa;"></i>
+                <h2>App Design</h2>
+                <p class="contact">Beginner programmer who can potentially help create programs for smartphones, tablets, and computers.</p>
+                <a href="#contact">Learn More </a>
+            </div>
+        </div>            
+    </div>
+</div>
+
+<!-- ------this is the Portfolio Section------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Portfolio Images/dinosaur.jpg" alt="dinosaur project">
+                <div class="layer">
+                    <h3>How Climate Change Affects Us</h3>
+                    <p>write something here</p>
+                    <a href="https://github.com/Honeyx03/project-dinosaur-museum"><i class="fa-solid fa-up-right-from-square" style="color: #ff00d0;"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Portfolio Images/WeatherApp.webp" alt="weather app">
+                <div class="layer">
+                    <h3>What Are We Going To Do about It?</h3>
+                    <p>write something here</p>
+                    <a href="https://github.com/Honeyx03/project-weather-app"><i class="fa-solid fa-up-right-from-square" style="color: #ff00d0;"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Portfolio Images/movieTime.webp" alt="movie filter">
+                <div class="layer">
+                    <h3>More information</h3>
+                    <p>write something here</p>
+                    <a href="https://www.youtube.com/watch?v=qySBQjSXbfw"><i class="fa-solid fa-up-right-from-square" style="color: #ff00d0;"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="main.html" class="button">back to home</a>
+    </div>
+</div>
+    <!-------------------- Contact section  ----------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><span><i class="fa-solid fa-paper-plane" style="color: #ff057e;"></i></span> noniporter@pursuit.org   </p>
+                <div class="social-icons">
+                    <a href="https://www.github.com/Honeyx03"><i class="fa-brands fa-github" style="color: #000000;"></i></a>
+                    <a href="https://www.linkedin.com/in/noni-porter-46a4a272/"><i class="fa-brands fa-linkedin" style="color: #0056eb;"></i></a>
+                </div>
+                <a href="Portfolio Images/Copy of Noni_Porter_Pursuit_Resume..docx.pdf" download class="button button2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <p>Tell me how was your user experience here <i class="fa-solid fa-arrow-down" style="color: #ff0095;"></i>. Leave a comment or concern below with your information. It will be much appreciated! Thank you and have a wonderful day!</p>
+                <form action="https://script.google.com/a/macros/pursuit.org/s/AKfycbyv2yf9r7ik0gGy-s3e-5fyLae5rqqA-EOh-OslQYwKx2lAYtul-UZhF2tk65iDkBPmpQ/exec" method="POST" name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="button button2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Honeyx03. Life Should Be Sweet Like Honey   <i class="fa-sharp fa-solid fa-heart" style="color: #ff4db5;"></i></p>
+    </div>
+</div>
+
+    <!-- Our JS code for my tab-links in my ABOUT ME section  -->
+    <script>
+    // Tab function to open
+        let tabLinks = document.getElementsByClassName("tab-links")
+        let tabContents = document.getElementsByClassName("tab-contents")
+
+        const openTab = (tabname) => {
+           for (const link of tabLinks) {
+                link.classList.remove("active-link");
+           } 
+           for (const content of tabContents) {
+                content.classList.remove("active-tab");
+           } 
+            event.currentTarget.classList.add("active-link");
+
+            document.getElementById(tabname).classList.add("active-tab"); /*this code was a bit difficult to search for and understand but here's the gist: we are getting the tabname from the opentab fxn (example:skills, experience, education). when we receive this it will execute into the for loop and we will add the calssList "active-tab" basically when we click on a tab our fxn will "activate" both the tab and its content */
+        }
+
+    // fxn for responsive menu
+        const sideMenu = document.getElementById("side-menu")
+        
+
+        const openMenu = () => {
+            sideMenu.style.right = "0" //here I am using JS to change our CSS style for nav ul (right) back to 0 so the menu options can be visible
+        } 
+
+        const closeMenu = () => {
+            sideMenu.style.right = "-200px" //here I am using JS to change our CSS style for nav ul (right) back to 200 so the menu options can be visible
+        } 
+
+
+    //JS code from gitHub that will allow me to connect my Google Sheets to my webpage contact form
+   
+        // const scriptURL = "https://script.google.com/a/macros/pursuit.org/s/AKfycbzrGe9VR63tvJPSXKXJuEcdN8zpQoM5_m3sP81A1OZCvpKjCkrDFaapN70twy2TnVU47w/exec"
+        
+        
+        // const form = document.forms['submit-to-google-sheet']
+        // const msg = document.getElementById('msg')
+
+        // form.addEventListener('submit', e => {
+        //     e.preventDefault()
+        //     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        //     .then(response => {
+        //         msg.innerHTML = "Message sent successfully"
+
+        //         setTimeout(function(){
+        //             msg.innerHTML=''
+        //         }, 5000)
+        //         form.reset();
+        //     })
+        //     .catch(error => console.error('Error!', error.message))
+        // })
+    </script>
+
+<!-- <script>
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById('msg');
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(form.action, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                msg.innerHTML = "Message sent successfully";
+                setTimeout(function() {
+                    msg.innerHTML = '';
+                }, 5000);
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message));
+    });
+</script> -->
+    
+</body>
+</html>

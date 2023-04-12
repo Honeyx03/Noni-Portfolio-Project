@@ -1,0 +1,455 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(245, 220, 224);
+    color: black;
+}
+
+#header {
+   width: 100%;
+   height: 100vh;
+   background-image: url("Portfolio Images/climateChange8.jpeg"); 
+   background-size: 100%;
+   background-position: right;
+   background-repeat: no-repeat;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap ;
+}
+
+.logo {
+    width: 140px;
+    border-radius: 50px;
+}
+
+nav ul li {
+    display: inline-block; /* horizontally inline */
+    list-style: none;
+    margin: 0px 20px;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 900;
+    text-decoration: none; /* removes underline */
+    text-shadow:rgb(40, 19, 0) 0px 0 4px; /* color | offset-x | offset-y | blur-radius */
+    position: relative;
+}
+
+nav ul li a::after { /* the a:: has to be connected in order for code to work (before I had a :: and code didb't work because there was a space btw a & :: */
+    content: '';
+    width: 0; /* setting with to zero initially then going to use hover effect to "highlight" links */
+    height: 3px;
+    background-color: rgb(251, 142, 17);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.4s; /*adds a cute transitional line effect */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* if we move the cursor at to our link labels (home, about, etc. a line will appear underneath our links with the styling code above */
+}
+
+.header-text {
+    color: aliceblue;
+    font-size: 20px;
+    margin-top: 0%;
+    margin-left: 10px;
+}
+
+.header-text h1 {
+    font-size: 40px;
+    margin-top: 10px;
+    color: white
+}
+
+.header-text h1 span {
+    color: rgb(255, 145, 0);
+    text-shadow:rgb(40, 19, 0) 0px 0 4px;
+}
+
+/* -------------------------This is my About Me styling section-------------------- */
+
+#about {
+    padding: 80px 0;
+    color: rgb(255, 111, 0);
+}
+
+.intro h3 {
+    padding: 20px;
+    text-align: justify;
+}
+
+.intro h3 span {
+    color: rgb(255, 111, 0);
+}
+.about-me-img {
+    width: 300px;
+    border-radius: 50px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-column-1 {
+    flex-basis: 35%;
+}
+
+.about-column-2 {
+    flex-basis: 60%;
+}
+
+.subtitle {
+    /* font-family: fantasy; */
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.about-me-text {
+    margin-bottom: 10px;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px; /*20px top, 0px left & right 40px bottom*/
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 900;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0; /* setting with to zero initially then going to use hover effect to "highlight" links */
+    height: 3px;
+    background-color: rgb(251, 142, 17);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.4s;
+}
+
+.tab-links.active-link::after {
+    width: 60%; /*this is the same styling as for the links above for my nav ul li a links */
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: brown;
+    font-size: 14px;
+}
+
+.tab-contents {
+    display: none; /*only the first table will be visible (see code below) and we will us JS to make a fxn that will make the other tabs visible via a click event */
+}
+
+.tab-contents.active-tab {
+    display: block; /*active tab is visible*/
+}
+
+
+/* -------------------------This is my SERVICES styling section-------------------- */
+
+#services {
+    padding: 30px 0;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div {
+    background-color: #ffebcd;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 300;
+    padding: 40px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div a {
+    display: inline;
+    font-size: 12px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.services-list div:hover {
+    background-color: rgb(248, 248, 0);
+    transform: translateY(-20px);
+}
+
+/* -------------------------This is my PORTFOLIO styling section-------------------- */
+
+#portfolio {
+    padding: 50px 0;
+}
+
+.work-list {
+        /* display: flex;
+        flex-direction: row;
+        justify-content: center; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    margin-top: 50px;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work-list img {
+    display: block;
+    align-content: center;
+    height: auto;
+    width: 200px;
+    border-radius: 10px;
+    margin: 10px;
+    margin-left: 50px;
+    transition: transform 0.5s;
+}
+
+.layer {
+    align-items: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.6), #f9c6a7);
+    border-radius: 10px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    justify-content: center;
+    left: 0;
+    padding-left: 30px;
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a {
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 30px;
+    background: rgb(255, 206, 232);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding-top: 18px;
+    text-align: center;
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.button {
+    border: 1px solid rgb(252, 101, 0);
+    border-radius: 10px;
+    display: block;
+    margin: 30px auto;
+    padding: 14px 30px;
+    text-decoration: none;
+    width: fit-content;
+    color: rgb(255, 20, 196);
+    font-size: 18px;
+    font-weight: 500;
+    transition: background 0.5s;
+}
+
+.button:hover {
+    background:rgb(248, 248, 0);
+}
+
+/* -------------------------This is my CONTACT section-------------------- */
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-right p {
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.contact-left p {
+    font-size: 25px;
+    margin-top: 40px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: rgb(255, 255, 255);
+    transform: translateY(-5px);
+}
+
+.button.button2 {
+   margin-top: 20px;
+   margin-left: 0;
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 100%;
+    background-color: #ffebcd;
+    border: 0;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px;
+    outline: none;
+    font-size: 18px;
+    color: deeppink;
+}
+
+form .button2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright {
+    text-align: center;
+    padding: 25px 0;
+    background-color: gold;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+
+/* -------------------------CSS for  SMALL SCREEN-------------------- */
+nav .fa-solid {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url("Portfolio Images/sunFlowerFlipped.jpg");
+    }
+    .header-text {
+        font-size: 16px;
+    }
+    .header-text h1 {
+        font-size: 30px;
+    }
+    .about-me-img {
+        height: auto;
+        width: 200;
+    }
+    nav .fa-solid {
+        display: block;
+        font-size: 30px;
+    }
+    nav ul {
+        background-color: #ffebcd;
+        position: fixed;
+        top: 0;
+        right: -200; /* I am changing from 0 to -200 because the width is 200 so by doing this the menu items will be hidden*/
+        height: 100vh;
+        padding-top: 50px;
+        width: 200px;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+    .copyright {
+        font-size: 14px;
+    }
+
+}
+
+#msg {
+    color: rgb(66, 0, 0);
+    display: block;
+    margin-top: -10px;
+}
