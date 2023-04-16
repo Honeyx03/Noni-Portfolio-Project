@@ -42,12 +42,12 @@ nav ul li {
 }
 
 nav ul li a {
-    color: rgb(185, 107, 38);
+    color: rgb(255, 255, 255);
     font-family: 'Open Sans', sans-serif;
     font-weight: 900;
     text-decoration: none; /* removes underline */
     font-size: 20px;
-    text-shadow:rgb(255, 255, 255) 0px 0 3px; /* color | offset-x | offset-y | blur-radius */
+    text-shadow:rgb(222, 120, 31) 0px 0 3px; /* color | offset-x | offset-y | blur-radius */
     position: relative;
 }
 
@@ -347,9 +347,13 @@ nav ul li a:hover::after {
     height: auto;
     border-radius: 10px;
 }
+.climate-column.tap img {
+    max-width: 30%;
+    height: auto; 
+}
 
 .climate-column.bottle img {
-    max-width: 50%;
+    max-width: 30%;
     height: auto;
     border-radius: 10px;
     padding-right: 60px;
